@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Windows</title>
+    <style>
+        html, body{
+            height: 100%;
+        }
+        body, ul, li{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: #2B659D;
+            position: relative;
+            font: 12px "Microsoft YaHei";
+        }
+        .main{
+            height: 92%;
+        }
+        ul, li {
+            list-style: none;
+        }
+        .start{
+            float: left;
+            width: 100px;
+            background: #0773B4;
+            height: 93%;
+            margin-right: 20px;
+            border-radius: 39px;
+            border: 1px solid #ccc;
+            box-shadow: inset 3px 3px 10px #fff,  inset -3px -3px 10px #fff;
+            color: #fff;
+            line-height: 40px;
+            text-align: center;
+        }
+        .list{
+            float: left;
+            height: 100%;
+            border: 1px solid transparent;
+
+        }
+        .list li{
+            float: left;
+            width: 90px;
+            background: #56769A;
+            height: 90%;
+            margin-right: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-shadow: inset 1px 1px 5px #fff,  inset -1px -1px 5px #fff;
+
+        }
+        footer{
+            height: 7%;
+            background: #2E5584;
+        }
+        .con1{
+            position: absolute;
+            left: 200px;
+            top: 100px;
+            width: 400px;
+            height: 370px;
+            background-color: rgba(72, 164, 255, 0.7);
+            /*opacity: 0.7;*/
+            border-radius: 10px;
+            box-shadow: 1px 1px 5px #000, -1px -1px 5px #000;
+            z-index: 2;
+        }
+        header{
+            height: 20px;
+            line-height: 20px;
+            padding: 10px 0 20px 10px;
+            font-size: 14px;
+        }
+        form{
+            padding: 10px;
+            opacity: 1;
+        }
+        textarea{
+            padding: 10px;
+            margin-top: 20px;
+            opacity: 1;
+        }
+        .con2{
+            left: 300px;
+            top: 130px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+<div class = "main">
+    <div class="con1">
+        <header>用户反馈</header>
+        <form class="link">
+            <input type="text" placeholder="姓名">
+            <input type="tel" placeholder="联系方式">
+            <textarea name="con" placeholder="请输入您的反馈信息"  cols="48" rows="15"></textarea>
+        </form>
+        <article></article>
+    </div>
+    <div class="con1 con2">
+        <header>对话框</header>
+        <form class="link">
+            <input type="text" placeholder="姓名">
+            <input type="tel" placeholder="联系方式">
+            <textarea name="con" placeholder="请输入您的反馈信息"  cols="48" rows="15"></textarea>
+        </form>
+    </div>
+</div>
+<footer>
+    <div class="start">开始</div>
+    <ul class="list">
+        <li><a href=#"></a></li>
+        <li><a href=#"></a></li>
+        <li><a href=#"></a></li>
+        <li><a href=#"></a></li>
+    </ul>
+</footer>
+</body>
+</html>
