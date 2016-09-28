@@ -61,7 +61,7 @@ gulp.task('webserver', function () { // 这里webserver 名字可以随便起 �
 
 // css 预处理 压缩
 var cssFiles = [
-    './src/styles/app.scss'
+    './src/styles/usage/page/app.cart.scss'
 ];
 gulp.task('scss', function () {
     gulp.src(cssFiles)
@@ -72,7 +72,7 @@ gulp.task('scss', function () {
 
 // js 模块化， 合并， 压缩
 var jsFiles = [
-    './src/scripts/app.js'
+    './src/scripts/app.cart.js'
 ];
 gulp.task('packjs', function () {
     gulp.src(jsFiles)
@@ -125,7 +125,7 @@ gulp.task('min', sequence('copy-index','ver','html'));
 
 // 拷贝 index.html 到 build 文件夹
 gulp.task('copy-index', function() {
-  gulp.src('./index.html')
+  gulp.src('./cart.html')
     .pipe(gulp.dest('./build/'));
 });
 
@@ -137,9 +137,9 @@ gulp.task('copy-images', function(){
 
 // 侦测 文件变化 执行相应任务
 gulp.task('watch', function () {
-   gulp.watch('./index.html', ['copy-index']);
+   gulp.watch('./cart.html', ['copy-index']);
    gulp.watch('./images/**/*', ['copy-images']);
-   gulp.watch('./src/styles/*.{scss,css}',['scss', 'min']);
+   gulp.watch('./src/styles/usage/page/*.{scss,css}',['scss', 'min']);
    gulp.watch('./src/scripts/*.js',['packjs', 'min']);
 });
 
