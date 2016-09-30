@@ -41,7 +41,7 @@ gulp.task('webserver', function () { // 这里webserver 名字可以随便起 �
             middleware: function (req, res, next) {
                 var urlObj = url.parse(req.url,  true);
                 switch (urlObj.pathname) {
-                    case '/api/order':
+                    case '/api/list.php':
                         res.setHeader('Content-Type','application/json');
                         fs.readFile('./mock/list.json', function (err, data) {
                             res.end(data);
@@ -61,18 +61,18 @@ gulp.task('webserver', function () { // 这里webserver 名字可以随便起 �
 
 // css 预处理 压缩
 var cssFiles = [
-    './src/styles/app.scss'
+    './src/styles/usage/page/app-index.scss'
 ];
 gulp.task('scss', function () {
     gulp.src(cssFiles)
         .pipe(sass().on('error', sass.logError))
-        .pipe(minifyCSS())
+        //.pipe(minifyCSS())
         .pipe(gulp.dest('./build/prd/styles/'));
 });
 
 // js 模块化， 合并， 压缩
 var jsFiles = [
-    './src/scripts/app.js'
+    './src/scripts/*.js'
 ];
 gulp.task('packjs', function () {
     gulp.src(jsFiles)
@@ -85,7 +85,13 @@ gulp.task('packjs', function () {
                 loaders: [
                     {
                         test: /\.js$/,
-                        loader: 'imports?define=>false'
+                        loader: 'imports?define=>false',
+                        //不解析
+                        exclude: './src/scripts/libs/zepto.js'
+                    },
+                    {
+                        test: /\.string$/,
+                        loader: 'string'
                     }
                 ]
             }
@@ -125,7 +131,7 @@ gulp.task('min', sequence('copy-index','ver','html'));
 
 // 拷贝 index.html 到 build 文件夹
 gulp.task('copy-index', function() {
-  gulp.src('./index.html')
+  gulp.src('./*.html')
     .pipe(gulp.dest('./build/'));
 });
 
@@ -137,10 +143,12 @@ gulp.task('copy-images', function(){
 
 // 侦测 文件变化 执行相应任务
 gulp.task('watch', function () {
-   gulp.watch('./index.html', ['copy-index']);
+   gulp.watch('./*.html', ['copy-index']);
    gulp.watch('./images/**/*', ['copy-images']);
-   gulp.watch('./src/styles/*.{scss,css}',['scss', 'min']);
-   gulp.watch('./src/scripts/*.js',['packjs', 'min']);
+   // gulp.watch('./src/styles/*.{scss,css}',['scss', 'min']);
+   gulp.watch('./src/styles/**/*',['scss']);
+   // gulp.watch('./src/scripts/*.js',['packjs', 'min']);
+   gulp.watch('./src/scripts/**/*',['packjs']);
 });
 
 // 配置 default 任务， 执行任务队列  有顺序
