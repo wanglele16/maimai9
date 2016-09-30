@@ -1,13 +1,5 @@
 @charset "utf-8";
 @import "../core/reset";
-@import "../layout/yo-flex";
-@import "../../lib/fragment/yo-header";
-@import "../fragment/yo-list";
-@import "../element/yo-badge";
 
-// 页面所需模块
-@import "../module/m-header";
-body{
-  background: red;
-  
-}
+// @import "../common/common.scss";
+@import "../module/m-cart.scss";

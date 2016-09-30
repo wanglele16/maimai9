@@ -1,3 +1,1 @@
-var str = require('./common.js');
-
-console.log(str);
+require('./views/cart.js');

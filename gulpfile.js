@@ -9,7 +9,7 @@ var sass = require('gulp-sass');
 var minifyCSS = require('gulp-minify-css');
 
 // 引入 js 模块化工具 gulp-webpack, 获得 js 文件名模块 vinyl-named, js 压缩模块
-var named =require('vinyl-named');
+var named = require('vinyl-named');
 var webpack = require('gulp-webpack');
 var uglify = require('gulp-uglify');
 
@@ -26,7 +26,7 @@ var revCollector = require('gulp-rev-collector');
 var sequence = require('gulp-sequence');
 
 //启动 webserver
-gulp.task('webserver', function () { // 这里webserver 名字可以随便起 与上面下面无关
+gulp.task('webserver', function() { // 这里webserver 名字可以随便起 与上面下面无关
     gulp.src('./')
         .pipe(webserver({
             host: 'localhost',
@@ -38,35 +38,35 @@ gulp.task('webserver', function () { // 这里webserver 名字可以随便起 �
             livereload: true,
 
             // mock 数据
-            middleware: function (req, res, next) {
-                var urlObj = url.parse(req.url,  true);
+            middleware: function(req, res, next) {
+                var urlObj = url.parse(req.url, true);
                 switch (urlObj.pathname) {
-                    case '/api/order':
-                        res.setHeader('Content-Type','application/json');
-                        fs.readFile('./mock/list.json', function (err, data) {
+                    case '/api/list.php':
+                        res.setHeader('Content-Type', 'application/json');
+                        fs.readFile('./mock/list.json', function(err, data) {
                             res.end(data);
                         });
                         return;
-                    case 'api/users':
+                    case '/api/users':
                         // ...
                         return;
-                    case 'api/cart':
+                    case '/api/cart':
                         // ...
                         return;
                 }
                 next();
             }
-    }))
+        }))
 });
 
 // css 预处理 压缩
 var cssFiles = [
     './src/styles/usage/page/app.cart.scss'
 ];
-gulp.task('scss', function () {
+gulp.task('scss', function() {
     gulp.src(cssFiles)
         .pipe(sass().on('error', sass.logError))
-        .pipe(minifyCSS())
+        // .pipe(minifyCSS())
         .pipe(gulp.dest('./build/prd/styles/'));
 });
 
@@ -74,26 +74,28 @@ gulp.task('scss', function () {
 var jsFiles = [
     './src/scripts/app.cart.js'
 ];
-gulp.task('packjs', function () {
+gulp.task('packjs', function() {
     gulp.src(jsFiles)
         .pipe(named())
         .pipe(webpack({
             output: {
                 filename: '[name].js'
-        },
+            },
             module: {
-                loaders: [
-                    {
-                        test: /\.js$/,
-                        loader: 'imports?define=>false'
-                    }
-                ]
+                loaders: [{
+                    test: /\.js$/,
+                    loader: 'imports?define=>false',
+                    exclude: './src/scripts/libs/zepto.js'
+                }, {
+                    test: /\.string$/,
+                    loader: 'string'
+                }]
             }
-    }))
-        .pipe(uglify().on('error', function (err) {
-            console.log('\x07', err.lineNumber, err.message);
-            return this.end();
         }))
+        // .pipe(uglify().on('error', function (err) {
+        //     console.log('\x07', err.lineNumber, err.message);
+        //     return this.end();
+        // }))
         .pipe(gulp.dest('./build/prd/scripts/'));
 });
 
@@ -104,7 +106,7 @@ var cssDistFiles = [
 var jsDistFiles = [
     './build/prd/scripts/app.js'
 ];
-gulp.task('ver', function () {
+gulp.task('ver', function() {
     gulp.src(cssDistFiles)
         .pipe(rev())
         .pipe(gulp.dest('./build/prd/styles/'))
@@ -116,34 +118,34 @@ gulp.task('ver', function () {
         .pipe(rev.manifest())
         .pipe(gulp.dest('./build/ver/scripts/'));
 });
-gulp.task('html', function () {
-    gulp.src(['./build/ver/**/*','./build/*.html'])
+gulp.task('html', function() {
+    gulp.src(['./build/ver/**/*', './build/*.html'])
         .pipe(revCollector())
         .pipe(gulp.dest('./build/'));
 });
-gulp.task('min', sequence('copy-index','ver','html'));
+gulp.task('min', sequence('copy-index', 'ver', 'html'));
 
 // 拷贝 index.html 到 build 文件夹
 gulp.task('copy-index', function() {
-  gulp.src('./cart.html')
-    .pipe(gulp.dest('./build/'));
+    gulp.src('./cart.html')
+        .pipe(gulp.dest('./build/'));
 });
 
 // 拷贝 images 到 build 文件夹
-gulp.task('copy-images', function(){
-  gulp.src('./images/**/*')
-    .pipe(gulp.dest('./build/images/'));
+gulp.task('copy-images', function() {
+    gulp.src('./images/**/*')
+        .pipe(gulp.dest('./build/images/'));
 });
 
 // 侦测 文件变化 执行相应任务
-gulp.task('watch', function () {
-   gulp.watch('./cart.html', ['copy-index']);
-   gulp.watch('./images/**/*', ['copy-images']);
-   gulp.watch('./src/styles/usage/page/*.{scss,css}',['scss', 'min']);
-   gulp.watch('./src/scripts/*.js',['packjs', 'min']);
+gulp.task('watch', function() {
+    gulp.watch('./cart.html', ['copy-index']);
+    gulp.watch('./images/**/*', ['copy-images']);
+    gulp.watch('./src/styles/**/*', ['scss']);
+    gulp.watch('./src/scripts/**/*', ['packjs']);
 });
 
 // 配置 default 任务， 执行任务队列  有顺序
-gulp.task('default', ['watch', 'webserver'], function () {
-   console.log('执行完毕');
+gulp.task('default', ['watch', 'webserver'], function() {
+    console.log('执行完毕');
 });
