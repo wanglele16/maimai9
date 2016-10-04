@@ -41,17 +41,35 @@ gulp.task('webserver', function () { // 这里webserver 名字可以随便起 �
             middleware: function (req, res, next) {
                 var urlObj = url.parse(req.url,  true);
                 switch (urlObj.pathname) {
-                    case '/api/list.php':
+                    case '/api/recSpeIndex':
                         res.setHeader('Content-Type','application/json');
-                        fs.readFile('./mock/list.json', function (err, data) {
+                        fs.readFile('./mock/recSpeIndex.json', function (err, data) {
                             res.end(data);
                         });
                         return;
-                    case 'api/users':
-                        // ...
+                    case '/api/newIndex':
+                        res.setHeader('Content-Type','application/json');
+                        fs.readFile('./mock/newIndex.json', function (err, data) {
+                            res.end(data);
+                        });
                         return;
-                    case 'api/cart':
-                        // ...
+                    case '/api/hotIndex':
+                        res.setHeader('Content-Type','application/json');
+                        fs.readFile('./mock/hotIndex.json', function (err, data) {
+                            res.end(data);
+                        });
+                        return;
+                    case '/api/counIndex':
+                        res.setHeader('Content-Type','application/json');
+                        fs.readFile('./mock/counIndex.json', function (err, data) {
+                            res.end(data);
+                        });
+                        return;
+                    case '/api/hotSeIndex':
+                        res.setHeader('Content-Type','application/json');
+                        fs.readFile('./mock/hotSeIndex.json', function (err, data) {
+                            res.end(data);
+                        });
                         return;
                 }
                 next();

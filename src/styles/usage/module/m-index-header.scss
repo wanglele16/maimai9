@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 body{
+  font-size: .12rem;
   @include flexbox();
   @include flex-direction(column);
   background: #fff;
@@ -47,11 +48,19 @@ body{
 
   #wrap-index {
     width: 100%;
-    overflow: hidden;
-    @include flexbox();
-    @include flex(1, column);
+
+
     .main {
       width: 100%;
     }
   }
+
+  #wrapbox-index {
+    @include flexbox();
+    @include flex(1, column);
+    overflow: hidden;
+    width: 100%;
+  }
+
+
 }
