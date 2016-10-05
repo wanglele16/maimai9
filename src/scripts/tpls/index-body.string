@@ -1,0 +1,20 @@
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><a href=""><img src="/build/images/ban-index0.jpg" alt=""></a></div>
+        <div class="swiper-slide"><a href=""><img src="/build/images/ban-index1.jpg" alt=""></a></div>
+        <div class="swiper-slide"><a href=""><img src="/build/images/ban-index2.jpg" alt=""></a></div>
+        <div class="swiper-slide"><a href=""><img src="/build/images/ban-index3.jpg" alt=""></a></div>
+        <div class="swiper-slide"><a href=""><img src="/build/images/ban-index4.jpg" alt=""></a></div>
+        <div class="swiper-slide"><a href=""><img src="/build/images/ban-index5.jpg" alt=""></a></div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+
+   <!--  如果需要导航按钮
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    &lt;!&ndash; 如果需要滚动条 &ndash;&gt;
+    <div class="swiper-scrollbar"></div>-->
+</div>
+
