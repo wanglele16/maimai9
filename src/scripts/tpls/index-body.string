@@ -160,3 +160,4 @@
             <img src={{img[0].src}} alt="">
         </div>
     </script>
+</div>
