@@ -10,12 +10,28 @@ var common = require('../utils/common.util.js');
 common.renderBody($('body'), inHead + inFoot);
 common.append($('.main'), inBody);
 
-
+var scrollIndex;
 $(function () {
+
     setTimeout(function() {
-        var scrollIndex = new IScroll('#wrap-index');
-        scrollIndex.refresh();
-    }, 1000);
+        scrollIndex = new IScroll('#wrap-index',
+            {
+                bounce : false
+            });
+        /*scrollIndex.refresh();*/
+
+        $(".goBack-index").on("click",function(){
+            scrollIndex.scrollTo(0, 0, 200);
+        });
+        scrollIndex.on('scrollEnd', function () {
+            if (this.y < 0) {
+                $('.goBack-index').show();
+            } else {
+                $('.goBack-index').hide();
+            }
+            scrollIndex.refresh();
+
+        }, 100);
     /*var scrollIndex = new IScroll('#wrap-index');*/
 
     var indexSwiper = new Swiper('.swiper-container',
@@ -27,7 +43,29 @@ $(function () {
             /*effect: 'coverflow',*/
             loop: true
 
+
+
+
         });
+
+
+    });
+
+    /*$(window).on("scroll",function(){
+        if($(this).scrollTop()>0){
+            $("#rightFloat").show();
+        }else{
+            $("#rightFloat").hide();
+        }
+    })*/
+});
+
+$.ajax({
+    url: '/api/bannerIndex',
+    success: function (res) {
+        var html = template('swi-index', res);
+        common.inner($('#swiper-index'), html);
+    }
 });
 
 $.ajax({

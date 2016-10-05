@@ -1138,13 +1138,47 @@ a {
       .yo-badge-tag::after {
         border-radius: 0.15rem; } }
 
-[type=tpl] {
-  display: none; }
+body {
+  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif;
+  position: relative; }
+
+#footer-index {
+  width: 100%;
+  height: .55rem;
+  padding-top: .05rem; }
+  #footer-index ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+    color: #999; }
+    #footer-index ul li {
+      width: 20%;
+      height: .5rem;
+      font-size: 12px;
+      text-align: center; }
+      #footer-index ul li i {
+        display: block;
+        width: 25px;
+        height: 22px;
+        background: url(/build/images/footerBtn.png) 2px -22px no-repeat;
+        background-size: 500% 44px;
+        margin: 3px auto; }
+      #footer-index ul li .fr2-index {
+        background-position: -22px -22px; }
+      #footer-index ul li .fr3-index {
+        background-position: -52px -22px; }
+      #footer-index ul li .fr4-index {
+        background-position: -78px -22px; }
+      #footer-index ul li .fr5-index {
+        background-position: -101px -22px; }
+      #footer-index ul li i.active-index {
+        background-position-y: 0; }
+      #footer-index ul li i.active-index + span {
+        color: #fc395b; }
 
 body {
-  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif; }
-
-body {
+  position: relative;
   font-size: .12rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1204,7 +1238,14 @@ body {
   body #wrap-index {
     width: 100%; }
     body #wrap-index .main {
-      width: 100%; }
+      width: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      flex-direction: column; }
   body #wrapbox-index {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1463,9 +1504,57 @@ h1, h2, h3, h4, h5, h6 {
         .hotSe-index .hotSe-indexBox #hotSe1-index div img {
           width: 100%; }
 
-#foot-index {
-  width: 100%;
-  height: .5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex; }
+.foot-index {
+  background: #4c4c4c;
+  padding: .14rem 0; }
+  .foot-index ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex; }
+    .foot-index ul li {
+      text-align: center;
+      width: 25%; }
+      .foot-index ul li i {
+        background: url(/build/images/bott_icon.png) no-repeat;
+        background-size: 380% 100%;
+        width: .4rem;
+        height: .4rem;
+        display: block;
+        margin: 0 auto; }
+      .foot-index ul li i.f-icon1 {
+        background-position: .06rem 0; }
+      .foot-index ul li i.f-icon2 {
+        background-position: -.34rem .05rem; }
+      .foot-index ul li i.f-icon3 {
+        background-position: -.73rem .03rem; }
+      .foot-index ul li i.f-icon4 {
+        background-position: -1.11rem 0; }
+      .foot-index ul li i.f-icon4 + p {
+        padding-top: 10px; }
+      .foot-index ul li p {
+        color: #ffffff;
+        font-size: .09rem;
+        line-height: .2rem; }
+  .foot-index .commit-index {
+    padding-top: .14rem;
+    /*p:nth-of-type(3) {
+      color: #fc395b;
+      font-size: .09rem;
+    }*/ }
+    .foot-index .commit-index p {
+      color: #fff;
+      font-size: .11rem;
+      text-align: center;
+      line-height: .22rem; }
+    .foot-index .commit-index .pRed-index {
+      color: #fc395b;
+      font-size: .09rem; }
+
+.goBack-index {
+  position: fixed;
+  bottom: .6rem;
+  right: .1rem;
+  background: url(/build/images/top.png) no-repeat;
+  background-size: 100% 100%;
+  width: .36rem;
+  height: .36rem; }

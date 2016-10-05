@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 body{
+  position: relative;
   font-size: .12rem;
   @include flexbox();
   @include flex-direction(column);
@@ -52,6 +53,8 @@ body{
 
     .main {
       width: 100%;
+      @include flexbox();
+      @include flex-direction(column);
     }
   }
 

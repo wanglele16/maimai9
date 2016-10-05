@@ -293,11 +293,70 @@ h1, h2, h3, h4, h5, h6 {
           width: 100%;
         }
       }
-
     }
 
   }
 }
+
+.foot-index {
+  background: #4c4c4c;
+  padding: .14rem 0;
+  ul {
+    @include flexbox();
+    li {
+      text-align: center;
+      width: 25%;
+      i{
+        background: url(/build/images/bott_icon.png) no-repeat;
+        background-size: 380% 100%;
+        width: .4rem;
+        height: .4rem;
+        display: block;
+        margin: 0 auto;
+      }
+      i.f-icon1 {
+        background-position: .06rem 0;
+      }
+      i.f-icon2 {
+        background-position: -.34rem .05rem;
+      }
+      i.f-icon3 {
+        background-position: -.73rem .03rem;
+      }
+      i.f-icon4 {
+        background-position: -1.11rem 0;
+      }
+      i.f-icon4+p {
+        padding-top: 10px;
+      }
+      p {
+        color: #ffffff;
+        font-size: .09rem;
+        line-height: .2rem;
+      }
+    }
+  }
+  .commit-index {
+    padding-top: .14rem;
+    p {
+      color: #fff;
+      font-size: .11rem;
+      text-align: center;
+      line-height: .22rem;
+
+    }
+    .pRed-index {
+      color: #fc395b;
+      font-size: .09rem;
+    }
+    /*p:nth-of-type(3) {
+      color: #fc395b;
+      font-size: .09rem;
+    }*/
+  }
+}
+
+
 
 
 

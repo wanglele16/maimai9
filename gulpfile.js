@@ -71,6 +71,12 @@ gulp.task('webserver', function () { // 这里webserver 名字可以随便起 �
                             res.end(data);
                         });
                         return;
+                    case '/api/bannerIndex':
+                        res.setHeader('Content-Type','application/json');
+                        fs.readFile('./mock/bannerIndex.json', function (err, data) {
+                            res.end(data);
+                        });
+                        return;
                 }
                 next();
             }
