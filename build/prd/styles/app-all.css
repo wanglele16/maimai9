@@ -1248,9 +1248,9 @@ body {
         background: url(/build/images/icon_03.png) no-repeat 0 2px;
         background-size: 6px 14px; }
 
-.all-pro {
+#all-pro {
   width: 100%;
-  padding: .1rem 3%;
+  padding: .1rem 3% 0;
   background: #f1f1f1;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1260,11 +1260,96 @@ body {
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between; }
-  .all-pro li {
+  #all-pro li {
     width: 49%;
-    padding: .05rem 0 .1px 0;
+    padding: .05rem 0 .06rem 0;
     text-align: center;
     background: #fff;
     box-shadow: 0 .05rem .05rem #e9e9e9;
     margin-bottom: .1rem;
     border-radius: .08rem; }
+    #all-pro li a {
+      width: 82.758621%;
+      display: inline-block; }
+      #all-pro li a img {
+        width: 100%; }
+    #all-pro li h3 {
+      color: #fc395b;
+      height: .28rem;
+      font-size: .12rem;
+      line-height: .28rem;
+      position: relative;
+      padding: .04rem 3.2%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 100%;
+      white-space: nowrap; }
+      #all-pro li h3::after {
+        pointer-events: none;
+        position: absolute;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        content: "\0020";
+        border-color: #e5e5e5;
+        border-style: solid;
+        border-width: 0 0 1px 0;
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0; }
+        @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {
+          #all-pro li h3::after {
+            width: 100%;
+            height: 100%; } }
+        @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {
+          #all-pro li h3::after {
+            width: 200%;
+            height: 200%;
+            -webkit-transform: scale(0.5);
+            transform: scale(0.5); } }
+        @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {
+          #all-pro li h3::after {
+            width: 300%;
+            height: 300%;
+            -webkit-transform: scale(0.33333);
+            transform: scale(0.33333); } }
+    #all-pro li h4 {
+      font-weight: normal;
+      height: .22rem;
+      font-size: .13rem;
+      color: #333333;
+      line-height: .22rem;
+      letter-spacing: .01rem;
+      padding: .02rem 4.2% 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 100%;
+      white-space: nowrap; }
+    #all-pro li h5 {
+      font-weight: normal;
+      color: #666666;
+      height: .15rem;
+      font-size: .12rem;
+      line-height: .15rem;
+      padding: 0 3.2%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 100%;
+      white-space: nowrap;
+      letter-spacing: .01rem; }
+    #all-pro li h6 {
+      text-align: left;
+      font-weight: normal;
+      padding: .05rem 15%;
+      height: .25rem;
+      line-height: .15rem;
+      font-size: .12rem;
+      color: #999999;
+      letter-spacing: .01rem; }
+      #all-pro li h6 span {
+        color: #fc395b;
+        font-size: 15px;
+        margin-right: .1rem; }
+      #all-pro li h6 del {
+        font-size: .11rem;
+        text-decoration: line-through; }

@@ -1,0 +1,44 @@
+{
+  "data": [
+    {
+      "img": "/build/images/all-pro1.jpg",
+      "title": "来自昂贵坡地上的特选佳酿",
+      "intro1": "DWBS庄园特选勃艮第上夜丘干红葡萄酒",
+      "intro2": "DWBS Bourgogne Hautes Cotes de Nuits",
+      "newPrice": "¥1873",
+      "oldPrice": "¥2676",
+      "num": "2988",
+      "hot": "3999"
+    },
+    {
+      "img": "/build/images/all-pro2.jpg",
+      "title": "决不能认为它是个副牌",
+      "intro1": "拉图庄园副牌红葡萄酒2011",
+      "intro2": "Les Forts De Latour",
+      "newPrice": "¥1888",
+      "oldPrice": "¥4000",
+      "num": "1988",
+      "hot": "3399"
+    },
+    {
+      "img": "/build/images/all-pro3.jpg",
+      "title": "顶级甜白，贵族向征",
+      "intro1": "狄甘庄园贵腐甜白葡萄酒1998",
+      "intro2": "Chateau d'Yquem",
+      "newPrice": "¥2799",
+      "oldPrice": "¥5182",
+      "num": "1488",
+      "hot": "2399"
+    },
+    {
+      "img": "/build/images/all-pro4.jpg",
+      "title": "列级庄园酒的典范",
+      "intro1": "巴加芙庄园红葡萄酒2012",
+      "intro2": "Chateau Belgrave",
+      "newPrice": "¥366",
+      "oldPrice": "¥880",
+      "num": "4488",
+      "hot": "2309"
+    }
+  ]
+}

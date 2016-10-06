@@ -77,6 +77,18 @@ gulp.task('webserver', function () { // 这里webserver 名字可以随便起 �
                             res.end(data);
                         });
                         return;
+                    case '/api/show1-all':
+                        res.setHeader('Content-Type','application/json');
+                        fs.readFile('./mock/show1-all.json', function (err, data) {
+                            res.end(data);
+                        });
+                        return;
+                    case '/api/more-all':
+                        res.setHeader('Content-Type','application/json');
+                        fs.readFile('./mock/more-all.json', function (err, data) {
+                            res.end(data);
+                        });
+                        return;
                 }
                 next();
             }

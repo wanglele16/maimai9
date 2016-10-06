@@ -11,11 +11,13 @@ common.renderBody($('body'), inHead + inFoot);
 common.append($('.main'), inBody);
 
 var scrollIndex;
+$('.goBack-index').hide();
 $(function () {
 
     setTimeout(function() {
         scrollIndex = new IScroll('#wrap-index',
             {
+                /*probeType: 3,*/
                 bounce : false
             });
         /*scrollIndex.refresh();*/
@@ -31,7 +33,7 @@ $(function () {
             }
             scrollIndex.refresh();
 
-        }, 100);
+        });
     /*var scrollIndex = new IScroll('#wrap-index');*/
 
     var indexSwiper = new Swiper('.swiper-container',
@@ -42,22 +44,8 @@ $(function () {
             grabCursor: true,
             /*effect: 'coverflow',*/
             loop: true
-
-
-
-
         });
-
-
-    });
-
-    /*$(window).on("scroll",function(){
-        if($(this).scrollTop()>0){
-            $("#rightFloat").show();
-        }else{
-            $("#rightFloat").hide();
-        }
-    })*/
+    }, 100);
 });
 
 $.ajax({
