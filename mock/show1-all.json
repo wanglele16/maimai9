@@ -8,7 +8,8 @@
       "newPrice": "¥1873",
       "oldPrice": "¥2676",
       "num": "2988",
-      "hot": "3999"
+      "hot": "3999",
+      "id": "000001"
     },
     {
       "img": "/build/images/all-pro2.jpg",
@@ -18,7 +19,8 @@
       "newPrice": "¥1888",
       "oldPrice": "¥4000",
       "num": "1988",
-      "hot": "3399"
+      "hot": "3399",
+      "id": "000002"
     },
     {
       "img": "/build/images/all-pro3.jpg",
@@ -28,7 +30,8 @@
       "newPrice": "¥2799",
       "oldPrice": "¥5182",
       "num": "1488",
-      "hot": "2399"
+      "hot": "2399",
+      "id": "000003"
     },
     {
       "img": "/build/images/all-pro4.jpg",
@@ -38,7 +41,8 @@
       "newPrice": "¥366",
       "oldPrice": "¥880",
       "num": "4488",
-      "hot": "2309"
+      "hot": "2309",
+      "id": "000004"
     }
   ]
 }

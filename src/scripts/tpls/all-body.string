@@ -25,7 +25,7 @@
 <script id="show1-all" type="text/html">
         {{each data as value i}}
         <li>
-            <a href="#"><img src={{value.img}} alt=""></a>
+            <a href=specific.html?{{value.id}}><img src={{value.img}} alt=""></a>
             <h3>{{value.title}}</h3>
             <h4>{{value.intro1}}</h4>
             <h5>{{value.intro2}}</h5>
