@@ -1,4 +1,16 @@
+<<<<<<< HEAD
 <footer id = "foot-index">
 
+=======
+<div class="goBack-index"></div>
+<footer id = "footer-index">
+    <ul>
+        <li><i class = "fr1-index active-index"></i><span>主页</span></li>
+        <li><i class = "fr2-index"></i><span></span>分类</li>
+        <li><i class = "fr3-index"></i><span>购物车</span></li>
+        <li><i class = "fr4-index"></i><span>所有商品</span></li>
+        <li><i class = "fr5-index"></i><span>个人</span></li>
+    </ul>
+>>>>>>> b527d6acb0b1302f8d6ab46ea75bd6c7c431f299
 
 </footer>

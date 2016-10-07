@@ -41,6 +41,7 @@ gulp.task('webserver', function () { // 这里webserver 名字可以随便起 �
             middleware: function (req, res, next) {
                 var urlObj = url.parse(req.url,  true);
                 switch (urlObj.pathname) {
+<<<<<<< HEAD
                     case '/api/list.php':
                         res.setHeader('Content-Type','application/json');
                         fs.readFile('./mock/list.json', function (err, data) {
@@ -52,6 +53,43 @@ gulp.task('webserver', function () { // 这里webserver 名字可以随便起 �
                         return;
                     case 'api/cart':
                         // ...
+=======
+                    case '/api/recSpeIndex':
+                        res.setHeader('Content-Type','application/json');
+                        fs.readFile('./mock/recSpeIndex.json', function (err, data) {
+                            res.end(data);
+                        });
+                        return;
+                    case '/api/newIndex':
+                        res.setHeader('Content-Type','application/json');
+                        fs.readFile('./mock/newIndex.json', function (err, data) {
+                            res.end(data);
+                        });
+                        return;
+                    case '/api/hotIndex':
+                        res.setHeader('Content-Type','application/json');
+                        fs.readFile('./mock/hotIndex.json', function (err, data) {
+                            res.end(data);
+                        });
+                        return;
+                    case '/api/counIndex':
+                        res.setHeader('Content-Type','application/json');
+                        fs.readFile('./mock/counIndex.json', function (err, data) {
+                            res.end(data);
+                        });
+                        return;
+                    case '/api/hotSeIndex':
+                        res.setHeader('Content-Type','application/json');
+                        fs.readFile('./mock/hotSeIndex.json', function (err, data) {
+                            res.end(data);
+                        });
+                        return;
+                    case '/api/bannerIndex':
+                        res.setHeader('Content-Type','application/json');
+                        fs.readFile('./mock/bannerIndex.json', function (err, data) {
+                            res.end(data);
+                        });
+>>>>>>> b527d6acb0b1302f8d6ab46ea75bd6c7c431f299
                         return;
                 }
                 next();

@@ -1,6 +1,11 @@
 @charset "utf-8";
 
 body{
+<<<<<<< HEAD
+=======
+  position: relative;
+  font-size: .12rem;
+>>>>>>> b527d6acb0b1302f8d6ab46ea75bd6c7c431f299
   @include flexbox();
   @include flex-direction(column);
   background: #fff;
@@ -47,6 +52,7 @@ body{
 
   #wrap-index {
     width: 100%;
+<<<<<<< HEAD
     overflow: hidden;
     @include flexbox();
     @include flex(1, column);
@@ -54,4 +60,23 @@ body{
       width: 100%;
     }
   }
+=======
+
+
+    .main {
+      width: 100%;
+      @include flexbox();
+      @include flex-direction(column);
+    }
+  }
+
+  #wrapbox-index {
+    @include flexbox();
+    @include flex(1, column);
+    overflow: hidden;
+    width: 100%;
+  }
+
+
+>>>>>>> b527d6acb0b1302f8d6ab46ea75bd6c7c431f299
 }
