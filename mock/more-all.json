@@ -1,0 +1,48 @@
+{
+  "data": [
+    {
+      "img": "/build/images/all-pro5.jpg",
+      "title": "酒质华丽柔顺，优雅细腻",
+      "intro1": "金拓庄园(女伯爵)干红葡萄酒2008",
+      "intro2": "Chateau Pichon Lalande",
+      "newPrice": "¥1099",
+      "oldPrice": "¥2146",
+      "num": "988",
+      "hot": "9839",
+      "id": "000005"
+    },
+    {
+      "img": "/build/images/all-pro6.jpg",
+      "title": "最佳碰杯酒 Cheers！",
+      "intro1": "维图干红葡萄酒*6",
+      "intro2": "LES VENTURONS*6",
+      "newPrice": "¥768",
+      "oldPrice": "¥1608",
+      "num": "5488",
+      "hot": "2834",
+      "id": "000006"
+    },
+    {
+      "img": "/build/images/all-pro7.jpg",
+      "title": "最佳碰杯酒 Cheers！",
+      "intro1": "维图干红葡萄酒*2",
+      "intro2": "LES VENTURONS*6",
+      "newPrice": "¥256",
+      "oldPrice": "¥536",
+      "num": "11488",
+      "hot": "899",
+      "id": "000007"
+    },
+    {
+      "img": "/build/images/all-pro8.jpg",
+      "title": "几百块轻松将名庄纳入家中",
+      "intro1": "拉图加利红葡萄酒2011",
+      "intro2": "CChateau La Tour Carnet",
+      "newPrice": "¥339",
+      "oldPrice": "¥679",
+      "num": "3288",
+      "hot": "759",
+      "id": "000008"
+    }
+  ]
+}

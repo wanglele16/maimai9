@@ -53,7 +53,55 @@ gulp.task('webserver', function() { // 这里webserver 名字可以随便起 与
                     case '/api/cart.json':
                         res.setHeader('Content-Type', 'application/json');
                         fs.readFile('./mock/cart.json', function(err, data) {
-                          res.end(data);
+                            res.end(data);
+                        });
+                        return;
+                    case '/api/recSpeIndex':
+                        res.setHeader('Content-Type', 'application/json');
+                        fs.readFile('./mock/recSpeIndex.json', function(err, data) {
+                            res.end(data);
+                        });
+                        return;
+                    case '/api/newIndex':
+                        res.setHeader('Content-Type', 'application/json');
+                        fs.readFile('./mock/newIndex.json', function(err, data) {
+                            res.end(data);
+                        });
+                        return;
+                    case '/api/hotIndex':
+                        res.setHeader('Content-Type', 'application/json');
+                        fs.readFile('./mock/hotIndex.json', function(err, data) {
+                            res.end(data);
+                        });
+                        return;
+                    case '/api/counIndex':
+                        res.setHeader('Content-Type', 'application/json');
+                        fs.readFile('./mock/counIndex.json', function(err, data) {
+                            res.end(data);
+                        });
+                        return;
+                    case '/api/hotSeIndex':
+                        res.setHeader('Content-Type', 'application/json');
+                        fs.readFile('./mock/hotSeIndex.json', function(err, data) {
+                            res.end(data);
+                        });
+                        return;
+                    case '/api/bannerIndex':
+                        res.setHeader('Content-Type', 'application/json');
+                        fs.readFile('./mock/bannerIndex.json', function(err, data) {
+                            res.end(data);
+                        });
+                        return;
+                    case '/api/show1-all':
+                        res.setHeader('Content-Type', 'application/json');
+                        fs.readFile('./mock/show1-all.json', function(err, data) {
+                            res.end(data);
+                        });
+                        return;
+                    case '/api/more-all':
+                        res.setHeader('Content-Type', 'application/json');
+                        fs.readFile('./mock/more-all.json', function(err, data) {
+                            res.end(data);
                         });
                         return;
                 }
@@ -62,23 +110,24 @@ gulp.task('webserver', function() { // 这里webserver 名字可以随便起 与
         }))
 });
 
+
 // css 预处理 压缩
-var cssFiles = [
-    './src/styles/usage/page/app.cart.scss'
-];
+/*var cssFiles = [
+    './src/styles/usage/page/app-index.scss'
+];*/
 gulp.task('scss', function() {
-    gulp.src(cssFiles)
+    gulp.src('./src/styles/usage/page/*.scss')
         .pipe(sass().on('error', sass.logError))
-        // .pipe(minifyCSS())
+        //.pipe(minifyCSS())
         .pipe(gulp.dest('./build/prd/styles/'));
 });
 
 // js 模块化， 合并， 压缩
-var jsFiles = [
-    './src/scripts/app.cart.js'
-];
+/*var jsFiles = [
+    './src/scripts/!*.js'
+];*/
 gulp.task('packjs', function() {
-    gulp.src(jsFiles)
+    gulp.src('./src/scripts/*.js')
         .pipe(named())
         .pipe(webpack({
             output: {
@@ -88,6 +137,7 @@ gulp.task('packjs', function() {
                 loaders: [{
                     test: /\.js$/,
                     loader: 'imports?define=>false',
+                    //不解析
                     exclude: './src/scripts/libs/zepto.js'
                 }, {
                     test: /\.string$/,
@@ -95,10 +145,10 @@ gulp.task('packjs', function() {
                 }]
             }
         }))
-        // .pipe(uglify().on('error', function (err) {
-        //     console.log('\x07', err.lineNumber, err.message);
-        //     return this.end();
-        // }))
+        .pipe(uglify().on('error', function(err) {
+            console.log('\x07', err.lineNumber, err.message);
+            return this.end();
+        }))
         .pipe(gulp.dest('./build/prd/scripts/'));
 });
 
@@ -129,8 +179,8 @@ gulp.task('html', function() {
 gulp.task('min', sequence('copy-index', 'ver', 'html'));
 
 // 拷贝 index.html 到 build 文件夹
-gulp.task('copy-index', function() {
-    gulp.src('./cart.html')
+gulp.task('copy-html', function() {
+    gulp.src('./*.html')
         .pipe(gulp.dest('./build/'));
 });
 
@@ -142,9 +192,11 @@ gulp.task('copy-images', function() {
 
 // 侦测 文件变化 执行相应任务
 gulp.task('watch', function() {
-    gulp.watch('./cart.html', ['copy-index']);
+    gulp.watch('./*.html', ['copy-html']);
     gulp.watch('./images/**/*', ['copy-images']);
+    // gulp.watch('./src/styles/*.{scss,css}',['scss', 'min']);
     gulp.watch('./src/styles/**/*', ['scss']);
+    // gulp.watch('./src/scripts/*.js',['packjs', 'min']);
     gulp.watch('./src/scripts/**/*', ['packjs']);
 });
 

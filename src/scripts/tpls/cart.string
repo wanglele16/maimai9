@@ -2,7 +2,7 @@
   <div class="scroll-cart" id="cart-scroll">
     <div class="main-cart">
       <header class="header-common">
-        <a href="javascript:void(0)" class="header-goback"></a>
+        <a href="/build/index.html" class="header-goback"></a>
         <span>购物车</span>
       </header>
       <section class="menu-cart">
