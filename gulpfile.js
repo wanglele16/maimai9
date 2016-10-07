@@ -50,8 +50,11 @@ gulp.task('webserver', function() { // 这里webserver 名字可以随便起 与
                     case '/api/users':
                         // ...
                         return;
-                    case '/api/cart':
-                        // ...
+                    case '/api/cart.json':
+                        res.setHeader('Content-Type', 'application/json');
+                        fs.readFile('./mock/cart.json', function(err, data) {
+                          res.end(data);
+                        });
                         return;
                 }
                 next();

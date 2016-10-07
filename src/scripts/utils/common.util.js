@@ -1,12 +1,20 @@
 var common = {
-    render: function($el, str) {
-        if ($el.get(0).tagName.toLowerCase() == 'body') {
-            $el.prepend(str);
-        } else {
-            $el.html(str);
-            console.log(1);
-        }
-    }
+  renderBody: function ($el, str) {
+    $el.prepend(str);
+  },
+  inner: function ($el, str) {
+    $el.html(str);
+  },
+  append: function ($el, str) {
+    $el.append(str);
+  },
+
+  switchPage: function (index) {
+    $('#footer li').eq(index).addClass('active').siblings().removeClass('active');
+    $('#footer').on('tap', 'li', function () {
+      location.href = $(this).attr('data-url');
+    })
+  }
 };
 
 module.exports = common;
