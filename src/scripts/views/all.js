@@ -7,6 +7,7 @@ var inFoot = require('../tpls/index-foot.string');
 var common = require('../utils/common.util.js');
 
 common.renderBody($('body'), allBody + inFoot);
+common.switchPage(3);
 
 /*common.append($('.all-pro'), inBody);*/
 

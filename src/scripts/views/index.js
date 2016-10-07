@@ -9,6 +9,7 @@ var common = require('../utils/common.util.js');
 
 common.renderBody($('body'), inHead + inFoot);
 common.append($('.main'), inBody);
+common.switchPage(0);
 
 var scrollIndex;
 $('.goBack-index').hide();
@@ -22,7 +23,7 @@ $(function () {
             });
         /*scrollIndex.refresh();*/
 
-        $(".goBack-index").on("click",function(){
+        $(".goBack-index").on("tap",function(){
             scrollIndex.scrollTo(0, 0, 200);
         });
         scrollIndex.on('scrollEnd', function () {
