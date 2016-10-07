@@ -182,4 +182,8 @@
             <img src={{img[0].src}} alt="">
         </div>
     </script>
+<<<<<<< HEAD
 >>>>>>> b527d6acb0b1302f8d6ab46ea75bd6c7c431f299
+=======
+</div>
+>>>>>>> 86b066fc77c80d4db03090a3bb40e85d5829b10d

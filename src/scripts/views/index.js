@@ -9,6 +9,7 @@ var common = require('../utils/common.util.js');
 
 common.renderBody($('body'), inHead + inFoot);
 common.append($('.main'), inBody);
+common.switchPage(0);
 
 <<<<<<< HEAD
 
@@ -52,16 +53,18 @@ $(function () {
  }*/
 =======
 var scrollIndex;
+$('.goBack-index').hide();
 $(function () {
 
     setTimeout(function() {
         scrollIndex = new IScroll('#wrap-index',
             {
+                /*probeType: 3,*/
                 bounce : false
             });
         /*scrollIndex.refresh();*/
 
-        $(".goBack-index").on("click",function(){
+        $(".goBack-index").on("tap",function(){
             scrollIndex.scrollTo(0, 0, 200);
         });
         scrollIndex.on('scrollEnd', function () {
@@ -72,7 +75,7 @@ $(function () {
             }
             scrollIndex.refresh();
 
-        }, 100);
+        });
     /*var scrollIndex = new IScroll('#wrap-index');*/
 
     var indexSwiper = new Swiper('.swiper-container',
@@ -83,22 +86,8 @@ $(function () {
             grabCursor: true,
             /*effect: 'coverflow',*/
             loop: true
-
-
-
-
         });
-
-
-    });
-
-    /*$(window).on("scroll",function(){
-        if($(this).scrollTop()>0){
-            $("#rightFloat").show();
-        }else{
-            $("#rightFloat").hide();
-        }
-    })*/
+    }, 100);
 });
 
 $.ajax({

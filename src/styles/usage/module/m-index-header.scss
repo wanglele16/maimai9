@@ -1,8 +1,12 @@
 @charset "utf-8";
 
+<<<<<<< HEAD
 body{
 <<<<<<< HEAD
 =======
+=======
+body {
+>>>>>>> 86b066fc77c80d4db03090a3bb40e85d5829b10d
   position: relative;
   font-size: .12rem;
 >>>>>>> b527d6acb0b1302f8d6ab46ea75bd6c7c431f299
@@ -26,32 +30,33 @@ body{
     .in-searchbox {
       @include flex();
       padding-left: .15rem;
-    .in-searchwrap {
-      @include flexbox();
-      @include align-items();
-      height: .22rem;
-      line-height: .22rem;
-      @include border-radius(.15rem);
-      border: 1px #fd617c solid;
-      overflow: hidden;
-      font-size: 80%;
-      span {
-        background: url(/build/images/Search@2x.png) no-repeat;
-        background-size: 100% 100%;
-        width: .15rem;
-        height: .15rem;
-        display: block;
-        margin: 0 .1rem;
+      .in-searchwrap {
+        @include flexbox();
+        @include align-items();
+        height: .22rem;
+        line-height: .22rem;
+        @include border-radius(.15rem);
+        border: 1px #fd617c solid;
+        overflow: hidden;
+        font-size: 80%;
+        span {
+          background: url(/build/images/Search@2x.png) no-repeat;
+          background-size: 100% 100%;
+          width: .15rem;
+          height: .15rem;
+          display: block;
+          margin: 0 .1rem;
+        }
+        input {
+          min-width: 1.4rem;
+        }
       }
-      input {
-        min-width: 1.4rem;
-      }
-    }
     }
   }
 
   #wrap-index {
     width: 100%;
+<<<<<<< HEAD
 <<<<<<< HEAD
     overflow: hidden;
     @include flexbox();
@@ -63,6 +68,8 @@ body{
 =======
 
 
+=======
+>>>>>>> 86b066fc77c80d4db03090a3bb40e85d5829b10d
     .main {
       width: 100%;
       @include flexbox();
@@ -77,6 +84,9 @@ body{
     width: 100%;
   }
 
+<<<<<<< HEAD
 
 >>>>>>> b527d6acb0b1302f8d6ab46ea75bd6c7c431f299
+=======
+>>>>>>> 86b066fc77c80d4db03090a3bb40e85d5829b10d
 }

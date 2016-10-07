@@ -1,0 +1,35 @@
+<div id="wrapbox-all">
+    <section id="wrap-all">
+        <div class="main-all">
+            <header class="all-head">
+                所有商品
+                <a href="javascript: void(0)"></a>
+            </header>
+            <ul class="nav-all">
+                <li><a href="" class = "active-all">默认</a></li>
+                <li><a href="javascript: void(0);">价格</a><i class = "icon1"></i></li>
+                <li><a href="javascript: void(0);">销量</a><i class = "icon1"></i></li>
+                <li><a href="javascript: void(0);">人气</a><i class = "icon1"></i></li>
+            </ul>
+            <ul id = "all-pro">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </section>
+</div>
+
+
+<script id="show1-all" type="text/html">
+        {{each data as value i}}
+        <li>
+            <a href=specific.html?{{value.id}}><img src={{value.img}} alt=""></a>
+            <h3>{{value.title}}</h3>
+            <h4>{{value.intro1}}</h4>
+            <h5>{{value.intro2}}</h5>
+            <h6><span>{{value.newPrice}}</span><del>{{value.oldPrice}}</del></h6>
+        </li>
+        {{/each}}
+</script>
