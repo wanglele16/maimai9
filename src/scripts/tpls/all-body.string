@@ -7,9 +7,9 @@
             </header>
             <ul class="nav-all">
                 <li><a href="" class = "active-all">默认</a></li>
-                <li><a href="">价格</a><i class = "icon1"></i></li>
-                <li><a href="">销量</a><i class = "icon1"></i></li>
-                <li><a href="">人气</a><i class = "icon1"></i></li>
+                <li><a href="javascript: void(0);">价格</a><i class = "icon1"></i></li>
+                <li><a href="javascript: void(0);">销量</a><i class = "icon1"></i></li>
+                <li><a href="javascript: void(0);">人气</a><i class = "icon1"></i></li>
             </ul>
             <ul id = "all-pro">
                 <li></li>

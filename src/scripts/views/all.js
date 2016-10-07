@@ -40,7 +40,7 @@ $(function () {
         }
         var content = $(this).html();
         if(content == "默认") {
-            location.href = "all.html";
+            // location.href = "all.html";
         }
         if(content == "价格") {
             sortAll_price();
