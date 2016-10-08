@@ -1,0 +1,32 @@
+ <div class="main">
+        <nav>
+            <a href="#"></a><span>注册</span></nav>
+        <div class="content">
+            <from>
+                <div class="playuser">
+                    <div class="add">用户名:</div>
+                    <input type="text" placeholder="请输入手机或邮箱" class="txt" />
+                    <div class="red-icon"><i></i></div>
+                </div>
+                <div class="null"></div>
+                <div class="playuser">
+                    <div class="add">设置密码:</div>
+                    <input type="text" placeholder="设置6位以上的密码" class="txt" />
+                    <div class="red-icon"><i></i></div>
+                </div>
+                <div class="null"></div>
+                <div class="playuser">
+                    <div class="add">确认密码:</div>
+                    <input type="text" placeholder="请再次输入密码" class="txt" />
+                    <div class="red-icon"><i></i></div>
+                </div>
+                <div class="null"></div>
+                <div class="playuser">
+                    <div class="add"><i class="duihao"></i></div>
+                    <div style="font-size: 12px; line-height: 26px; margin-left: 8px; float: left;">我已同意并阅读</div>
+                </div>
+                <div class="null"></div>
+                <div class="playuser" style="height: 36px; margin-top: 18px; text-align: center;line-height: 36px;"><a href="#" class="sublime">提交</a></div>
+            </from>
+        </div>
+    </div>

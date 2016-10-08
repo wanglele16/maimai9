@@ -1,0 +1,300 @@
+ * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    body{overflow:scroll;}
+    .main {
+        margin: 0 auto;
+    }
+    
+    nav {
+        height: 40px;
+        line-height: 40px;
+        background: #fc395b;
+        width: 100%;
+        text-align: center;
+        color: #fff;
+    }
+    
+    nav a {
+        display: inline-block;
+        width: 10px;
+        float: left;
+        height: 16px;
+        background: url(/images/turn.jpg) no-repeat;
+        margin-top: 13px;
+        margin-left: 15px;
+        background-size: 100% 100%;
+    }
+    
+    nav span {
+        font-size: 18px;
+    }
+    
+    .content {
+        width: 100%;
+        background: #f1f1f1;
+        overflow:scroll;
+    }
+    
+
+    .home_img {
+        width: 100%;
+        height: 180px;
+        text-align: center;
+        background: url(/images/ifon-bg.jpg) no-repeat;
+        -webkit-background-size: 100% 100%;
+        background-size: 100% 100%;
+    }
+
+    .headimg {
+        display: inline-block;
+        height: 90px;
+        width: 90px;
+        border-radius: 50%;
+        border: 1px solid #e9e9e9;
+        margin-top: 15px;
+        overflow: hidden;
+    }
+    
+    .headimg img {
+        width: 100%;
+        display: block;
+    }
+    
+    #userName {
+        font-size: 14px;
+        color: #fff;
+    }
+    
+    .stars {
+        width: 100%;
+    }
+    
+    .stars p {
+        height: 30px;
+        width: 109px;
+        margin: 0 auto;
+    }
+    
+    .stars p img {
+        width: 100%;
+    }
+    
+    .m12 {
+        color: #fff;
+        font-size: 14px;
+        margin-top: 0px;
+        font-size:12px;
+    }
+    
+    .homeList {
+        height: 40px;
+        width: 100%;
+        background: #fff;
+    }
+    
+    .homeList ul {
+        overflow: hidden;
+        list-style: none;
+    }
+    
+    .homeList ul li {
+        float: left;
+        width: 33.3%;
+        line-height: 40px;
+        text-align: center;
+        font-size: 14px;
+    }
+    
+    .homeList ul li a {
+        color: #000;
+    }
+    
+    .homeList ul li span {
+        color: #fc395b;
+    }
+    
+    .homeNav {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        background: #fff;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .homeNav a {
+        display: block;
+        width: 25%;
+        margin-top: 10px;
+        text-align: center;
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+    
+    .homeNav a img {
+        width: 50%;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+    
+    .homeNav a span {
+        color: #888;
+    }
+    
+    .homeLove {
+        padding: 0 4%;
+        background: #fff;
+    }
+    
+    .homeLove h2 {
+        height: 24px;
+        line-height: 24px;
+        padding-top: 10px;
+        color: #fc395b;
+        font-size: 12px;
+    }
+    
+    .homeLove h2 i {
+        width: 14px;
+        height: 12px;
+        display: inline-block;
+        background: url(/images/per_icon.jpg) no-repeat center;
+        -webkit-background-size: 100% 100%;
+        background-size: 100% 100%;
+        margin-right: 5px;
+    }
+    
+    .homeLove_list {
+        width: 100%;
+        margin: 0 auto;
+        padding-bottom: 60px;
+        overflow: hidden;
+    }
+    
+    .homeLove_list ul {
+        overflow: hidden;
+        width: 100%;
+    }
+    
+    .homeLove_list ul li {
+        float: left;
+        width: 32%;
+        overflow: hidden;
+        /*padding: 0 1%;*/
+        /*margin:0 1%;*/
+        height: 180px;
+        /*background: red;*/
+    }
+    
+    .shop1>a {
+        display: block;
+        width: 89%;
+        border-radius: 8px;
+        box-shadow: 0 0 4px 3px #e9e9e9;
+        /*margin: 10px 0;*/
+        padding: 2% 2%;
+        margin-top: 10px;
+    }
+    
+    .shop2>a,
+    .shop3>a {
+        display: block;
+        width: 89%;
+        border-radius: 8px;
+        box-shadow: 0 0 4px 3px #e9e9e9;
+        /*margin: 10px 0;*/
+        padding: 2% 2%;
+        margin-top: 10px;
+    }
+    
+    .shop1 a img,
+    .shop3 a img {
+        width: 40px;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    .shop2 a img {
+        width: 40px;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    .nav2 {
+        font-size: 12px;
+        width: 93%;
+        color: #333;
+        line-height: 15px;
+        letter-spacing: 1px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    
+    .nav3 span {
+        font-size: 12px;
+        margin-right: 8px;
+    }
+    
+    footer {
+        width: 100%;
+        height: 50px;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        background: #fff;
+        padding-top: 5px;
+    }
+    
+    footer ul {
+        list-style: none;
+        width: 100%;
+        height: 50px;
+    }
+    
+    footer ul li {
+        width: 20%;
+        float: left;
+        height: 50px;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    
+    .foot li b{
+        display: block;
+        width: 25px;
+        height: 22px;
+        /*background-size: 500% 44px;*/
+        /*background-size: 50% 44px;*/
+        margin: 0px auto;
+        margin-top: 5px;
+
+        // margin-bottom: 5px;
+        /*background: url(img/footerBtn.png) no-repeat 2px -22px;*/
+       
+
+    }
+    .hht1{ background: url(/images/aa1.jpg) no-repeat center;}
+    .hht2{ background: url(/images/aa2.jpg) no-repeat center;}
+
+    .hht3{ background: url(/images/aa3.jpg) no-repeat center;}
+
+    .hht4{ background: url(/images/aa4.jpg) no-repeat center;}
+
+    .hht5{ background: url(/images/aa5.jpg) no-repeat center;}
+
+
+    
+    .foot li i {
+        font-style: normal;
+        color: #999;
+    }

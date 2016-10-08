@@ -1,0 +1,70 @@
+.mian {
+    margin: 0 auto;
+    .logo {
+        width: 72.34%;
+        margin: 38px auto 0;
+        img {
+            width: 100%;
+        }
+    }
+    form {
+        padding: 0 15px;
+        margin-top: 40px;
+        div {
+            height: 36px;
+            background: #fd889d;
+            margin-bottom: 24px;
+            border-radius: 5px;
+            div {
+                width: 10%;
+                float: left;
+                height: 36px;
+                margin-bottom: 0;
+                // background-size: 370% 100%;
+                // background: url(/images/login_icon.png) no-repeat;
+                &.person1 {
+                    background: url(/images/wen2.png) no-repeat 2px;
+                }
+                &.person2{
+                    background: url(/images/wen1.png) no-repeat 2px;
+                }
+
+
+            }
+            input {
+                width: 80%;
+                border: none;
+                height: 30px;
+                line-height: 30px;
+                background: #fd889d;
+                color: white;
+                margin-top: 3px;
+                font-size: 12px;
+                &::-webkit-input-placeholder {
+                    /* WebKit browsers */
+                    color: #fff;
+                }
+            }
+            &:nth-of-type(3) {
+                background: #f93c5e;
+                text-align: center;
+                line-height: 36px;
+                a {
+                    color: white;
+                }
+            }
+            &:nth-of-type(4) {
+                margin-top: 12px;
+                background: #fff;
+                text-align: right;
+                line-height: 16px;
+                a {
+                    color: #fc395b;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+

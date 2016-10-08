@@ -1,0 +1,16 @@
+@charset "UTF-8";
+[type=tpl] {
+  display: none; }
+
+@font-face {
+  font-family: 'iconfont';
+  /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  src: url("/build/images/iconfont/iconfont.woff") format("woff"), url("/build/images/iconfont/iconfont.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'iconfont';
+  /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  src: url("/build/images/iconfont/iconfont0.woff") format("woff"), url("/build/images/iconfont/iconfont0.ttf") format("truetype"); }
+
+.iconfont {
+  font-family: iconfont; }

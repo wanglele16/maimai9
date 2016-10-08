@@ -1,0 +1,108 @@
+ * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .main {
+        margin: 0 auto;
+    }
+    
+    nav {
+        height: 40px;
+        line-height: 40px;
+        background: #fc395b;
+        width: 100%;
+        text-align: center;
+        color: #fff;
+    }
+    
+    nav a {
+        display: inline-block;
+        width: 10px;
+        float: left;
+        height: 16px;
+        background: url(/images/turn.jpg) no-repeat;
+        margin-top: 13px;
+        margin-left: 15px;
+        background-size: 100% 100%;
+    }
+    
+    
+    .content {
+        padding: 16px 15px 25px;
+        margin-top: 6px;
+    }
+    
+    form {
+        padding: 15px;
+        margin-top: 20px;
+    }
+    
+    .playuser {
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .add {
+        float: left;
+        text-align: right;
+        color: #333;
+        font-size: 12px;
+        width: 20%;
+        height: 26px;
+        line-height: 24px;
+    }
+    
+    .txt {
+        float: left;
+        width: 63.5%;
+        color: #333;
+        border: 1px solid #ccc;
+        height: 24px;
+        margin-left: 10px;
+    }
+    
+    .red-icon {
+        float: left;
+        width: 12.1%;
+        font-size: 15px;
+        text-align: center;
+        overflow: hidden;
+        height: 26px;
+    }
+    
+    .red-icon>i {
+        width: 14px;
+        height: 13px;
+        background: url(/images/pin_icon.png) no-repeat -32px 4px;
+        background-size: 300% 115%;
+        display: block;
+        margin-left: 10px;
+    }
+    
+    .null {
+        height: 24px;
+        line-height: 24px;
+        margin-left: 26.4%;
+        color: #fc395b;
+    }
+    
+    .duihao {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        background: url(/images/cart_icon.png) no-repeat;
+        background-size: 730% 730%;
+        margin-top: 3px;
+    }
+    
+    
+    .sublime {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        background: #fc395b;
+        height: 36px;
+        border-radius: 5px;
+    }
+    .null{font-size: 12px;}
