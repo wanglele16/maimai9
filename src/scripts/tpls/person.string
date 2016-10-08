@@ -3,10 +3,10 @@
             <a href="#"></a><span>个人中心</span></nav>
         <div class="content">
             <div class="home_img">
-                <span class="headimg"><img src="./images/head_img.png" alt=""></span>
+                <span class="headimg"><img src="/images/head_img.png" alt=""></span>
                 <p id="userName">9879868698</p>
                 <div class="stars">
-                    <p><img src="./images/star1.gif" alt=""></p>
+                    <p><img src="/images/star1.gif" alt=""></p>
                 </div>
                 <p class="m12">品尝200元好酒完成晋级</p>
             </div>
@@ -18,33 +18,33 @@
                 </ul>
             </div>
             <div class="homeNav">
-                <a href="#"><img src="./images/per_01.png" alt=""><span>我的订单</span></a>
-                <a href="#"><img src="./images/per_09.png" alt=""><span>优惠卷</span></a>
-                <a href="#"><img src="./images/per_01.png" alt=""><span>我的订单</span></a>
-                <a href="#"><img src="./images/per_09.png" alt=""><span>优惠卷</span></a>
-                <a href="#"><img src="./images/per_01.png" alt=""><span>我的订单</span></a>
-                <a href="#"><img src="./images/per_09.png" alt=""><span>优惠卷</span></a>
-                <a href="#"><img src="./images/per_01.png" alt=""><span>我的订单</span></a>
-                <a href="#"><img src="./images/per_09.png" alt=""><span>优惠卷</span></a>
+                <a href="#"><img src="/images/per_01.png" alt=""><span>我的订单</span></a>
+                <a href="#"><img src="/images/per_09.png" alt=""><span>优惠卷</span></a>
+                <a href="#"><img src="/images/per_01.png" alt=""><span>我的订单</span></a>
+                <a href="#"><img src="/images/per_09.png" alt=""><span>优惠卷</span></a>
+                <a href="#"><img src="/images/per_01.png" alt=""><span>我的订单</span></a>
+                <a href="#"><img src="/images/per_09.png" alt=""><span>优惠卷</span></a>
+                <a href="#"><img src="/images/per_01.png" alt=""><span>我的订单</span></a>
+                <a href="#"><img src="/images/per_09.png" alt=""><span>优惠卷</span></a>
             </div>
             <div class="homeLove">
                 <h2><i class="i_icon"></i>猜你喜欢</h2>
                 <div class="homeLove_list">
                     <ul>
                         <li class="shop1">
-                            <a href="#"><img src="./images/pic1.jpg"></a>
+                            <a href="#"><img src="/images/pic1.jpg"></a>
                             <p class="nav2">拉维德干红葡萄酒</p>
                             <p class="nav2">KHKH</p>
                             <p class="nav3"><span style="color: #fc395b; font-weight: bold;">￥238</span><span>298</span></p>
                         </li>
                         <li class="shop2" style="margin:0 2%;">
-                            <a href="#"><img src="./images/pic1.jpg"></a>
+                            <a href="#"><img src="/images/pic1.jpg"></a>
                             <p class="nav2">拉维德干红葡萄酒</p>
                             <p class="nav2">KHKH</p>
                             <p class="nav3"><span style="color: #fc395b; font-weight: bold;">￥238</span><span>298</span></p>
                         </li>
                         <li class="shop3">
-                            <a href="#"><img src="./images/pic1.jpg"></a>
+                            <a href="#"><img src="/images/pic1.jpg"></a>
                             <p class="nav2">拉维德干红葡萄酒</p>
                             <p class="nav2">KHKH</p>
                             <p class="nav3"><span style="color: #fc395b; font-weight: bold;">￥238</span><span>298</span></p>
@@ -56,10 +56,11 @@
     </div>
     <footer>
         <ul class="foot">
-            <li><b class="hht1"></b><i>主页</i></li>
-            <li><b class="hht2"></b><i>分类</i></li>
-            <li><b class="hht3"></b><i>购物车</i></li>
-            <li><b class="hht4"></b><i>所有商品</i></li>
-            <li><b class="hht5"></b><i style="color: #fc395b;">注销</i></li>
+            <li data-url="/build/index.html"><b class="hht1"></b><i>主页</i></li>
+            <li data-url="#"><b class="hht2"></b><i>分类</i></li>
+            <li data-url="/build/cart.html"><b class="hht3"></b><i>购物车</i></li>
+            <li data-url="/build/all.html"><b class="hht4"></b><i>所有商品</i></li>
+            <li data-url="#"><b class="hht5"></b><i style="color: #fc395b;">注销</i></li>
+            
         </ul>
     </footer>

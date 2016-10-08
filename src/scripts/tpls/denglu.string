@@ -2,14 +2,15 @@
 
 <div class="mian">
 
-	<div class="logo"><img src="./images/login_logo.png"></div>
+	<div class="logo"><img src="/images/login_logo.png"></div>
 
     <form class="login-form">
     	
     	<div class="login-text"><div class="person1"></div><input type="text" placeholder="请输入您的手机和邮箱"></div>
     	<div class="login-text"><div class="person2"></div><input type="text" placeholder="密码"></div>
-    	<div class="login-text"><a href="#">提交</a></div>
-    	<div class="login-message"><a href="#">注册只需一步<i>&gt</i></a></div>
+    	<div class="login-text"><a href="./build/index.html">提交</a></div>
+    	<div class="login-message"><a href="./build/app-zhuce.html">注册只需一步<i>&gt</i></a></div>
+
     </form>
 </div>
 
