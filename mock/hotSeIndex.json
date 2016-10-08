@@ -1,0 +1,21 @@
+{
+  "data": [
+    {
+      "name": "香槟"
+    },
+    {
+      "name": "女士最爱"
+    },
+    {
+      "name": "起泡酒"
+    },
+    {
+      "name": "桃红葡萄酒"
+    }
+  ],
+  "img": [
+    {
+      "src": "/build/images/zong-index.jpg"
+    }
+  ]
+}

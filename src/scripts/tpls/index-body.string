@@ -1,0 +1,163 @@
+<div class="content-index">
+    <div class="swiper-container">
+        <div class="swiper-wrapper" id="swiper-index">
+           <!-- <div class="swiper-slide"><a href="javascript: void(0);"><img src="/build/images/ban-index0.jpg" alt=""></a>
+            </div>
+            <div class="swiper-slide"><a href="javascript: void(0);"><img src="/build/images/ban-index1.jpg" alt=""></a>
+            </div>
+            <div class="swiper-slide"><a href="javascript: void(0);"><img src="/build/images/ban-index2.jpg" alt=""></a>
+            </div>
+            <div class="swiper-slide"><a href="javascript: void(0);"><img src="/build/images/ban-index3.jpg" alt=""></a>
+            </div>
+            <div class="swiper-slide"><a href="javascript: void(0);"><img src="/build/images/ban-index4.jpg" alt=""></a>
+            </div>
+            <div class="swiper-slide"><a href="javascript: void(0);"><img src="/build/images/ban-index5.jpg" alt=""></a>
+            </div>-->
+        </div>
+
+        <div class="swiper-pagination"></div>
+    </div>
+    <div>
+        <div class="nav-index">
+            <a href=""><img src="/build/images/wine@2x.png" alt=""><span>葡萄酒</span></a>
+            <a href=""><img src="/build/images/per_10.png" alt=""><span>领优惠券</span></a>
+            <a href=""><img src="/build/images/200@2x.png" alt=""><span>200元以下</span></a>
+            <a href=""><img src="/build/images/per_11.png" alt=""><span>提货卡</span></a>
+        </div>
+
+        <div class="rec-index">
+            <div class="rec-indexBox">
+                <h2 class="recTil">特别推荐</h2>
+                <section id="rec1-index"></section>
+            </div>
+        </div>
+
+        <div class="new-index">
+            <div class="new-indexBox">
+                <h2 class="tilIndex ti1"><span>新品上架</span></h2>
+                <section id="new1-index"></section>
+            </div>
+        </div>
+
+        <div class="hot-index">
+            <div class="hot-indexBox">
+                <h2 class="tilIndex ti2"><span>热销推荐</span></h2>
+                <section id="hot1-index"></section>
+            </div>
+        </div>
+
+        <div class="coun-index">
+            <div class="coun-indexBox">
+                <h2 class="tilIndex ti3"><span>国家</span></h2>
+                <section id="coun1-index"></section>
+            </div>
+        </div>
+
+        <div class="hotSe-index">
+            <div class="hotSe-indexBox">
+                <h2 class="tilIndex ti4"><span>热门搜索</span></h2>
+                <section id="hotSe1-index"></section>
+            </div>
+        </div>
+
+        <div class="foot-index">
+            <ul>
+                <li>
+                    <i class="f-icon1"></i>
+                    <p>100%</p>
+                    <p>全球正品</p>
+                </li>
+                <li>
+                    <i class="f-icon2"></i>
+                    <p>341个</p>
+                    <p>城市送达</p>
+                </li>
+                <li>
+                    <i class="f-icon3"></i>
+                    <p>联合打假</p>
+                    <p>保护消费者</p>
+                </li>
+                <li>
+                    <i class="f-icon4"></i>
+                    <p>即时送服务</p>
+                </li>
+            </ul>
+            <div class=commit-index>
+                <p>买买酒 maim9.com All Rights Reserved
+                <p>
+                <p>京ICP备14040800号-1 京公网安备11010502027011</p>
+                <p class="pRed-index">买买酒承诺不销售任何含酒精产品给18岁以下人士</p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script id="swi-index" type="text/html">
+        {{each data as value i}}
+        <div class="swiper-slide"><a href="javascript: void(0);"><img src={{value.img}} alt=""></a>
+        </div>
+        {{/each}}
+    </script>
+
+
+    <script id="recSpe-index" type="text/html">
+        <ul>
+            <li><a href=""><img src={{data[0].img}} alt=""></a></li>
+            <li>
+                <a href=""><img src={{data[1].img}} alt=""></a>
+                <a href=""><img src={{data[2].img}} alt=""></a>
+            </li>
+        </ul>
+    </script>
+
+    <script id="newPro-index" type="text/html">
+        <ul>
+            {{each data as value i}}
+            <li>
+                <a href="#">
+                    <img src={{value.img}} alt="">
+                </a>
+            </li>
+            {{/each}}
+        </ul>
+    </script>
+
+    <script id="hotPro-index" type="text/html">
+        <ul>
+            <li><a href=""><img src={{data[0].img}} alt=""></a></li>
+            <li>
+                <a href=""><img src={{data[1].img}} alt=""></a>
+                <a href=""><img src={{data[2].img}} alt=""></a>
+            </li>
+        </ul>
+    </script>
+
+    <script id="country-index" type="text/html">
+        <ul>
+            {{each data as value i}}
+            <li>
+                <a href="#">
+                    <img src={{value.img}} alt="">
+                    <h4>{{value.name1}}</h4>
+                    <p>{{value.name2}}</p>
+                </a>
+            </li>
+            {{/each}}
+        </ul>
+    </script>
+
+    <script id="hotSearch-index" type="text/html">
+        <ul>
+            {{each data as value i}}
+            <li>
+                <a href="#">{{value.name}}</a>
+                <span></span>
+            </li>
+            {{/each}}
+        </ul>
+        <div>
+            <img src={{img[0].src}} alt="">
+        </div>
+    </script>
+</div>

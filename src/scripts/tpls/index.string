@@ -1,0 +1,35 @@
+<!--
+<script id="test" type="text/html">
+    <h1>{{title}}</h1>
+    <ul>
+        {{each list as value i}}
+        <li>索引 {{i + 1}} ：{{value}}</li>
+        {{/each}}
+    </ul>
+</script>-->
+
+<!--<div id="test" type="tpl">
+    <h1>{{title}}</h1>
+    <ul>
+        {{each list as value i}}
+        <li>索引 {{i + 1}} ：{{value}}</li>
+        {{/each}}
+    </ul>
+</div>-->
+
+<!--<div class="m-container">
+    <header>
+        <ul>
+            <li></li>
+            <li>
+                <span>热点</span>
+                <span>更多</span>
+                <span>哈哈</span>
+            </li>
+            <li></li>
+        </ul>
+    </header>
+    <nav></nav>
+    <section></section>
+    <footer></footer>
+</div>-->

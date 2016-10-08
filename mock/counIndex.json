@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "img": "/build/images/coun1-index.jpg",
+      "name1": "西班牙",
+      "name2": "Spain"
+    },
+    {
+      "img": "/build/images/coun2-index.png",
+      "name1": "法国",
+      "name2": "France"
+    },
+    {
+      "img": "/build/images/coun3-index.png",
+      "name1": "意大利",
+      "name2": "Italy"
+    },
+    {
+      "img": "/build/images/coun4-index.jpg",
+      "name1": "南非",
+      "name2": "South Africa"
+    }
+  ]
+}

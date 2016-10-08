@@ -1,30 +1,6 @@
 {
-  "data": [
-    {
-      "img": "/build/images/img1.jpg",
-      "title": "小丸子1"
-    },{
-      "img": "/build/images/img2.jpg",
-      "title": "小丸子2"
-    },{
-      "img": "/build/images/img3.jpg",
-      "title": "小丸子3"
-    },{
-      "img": "/build/images/img4.jpg",
-      "title": "小丸子4"
-    },
-    {
-      "img": "/build/images/img1.jpg",
-      "title": "小丸子1"
-    },{
-      "img": "/build/images/img2.jpg",
-      "title": "小丸子2"
-    },{
-      "img": "/build/images/img3.jpg",
-      "title": "小丸子3"
-    },{
-      "img": "/build/images/img4.jpg",
-      "title": "小丸子4"
-    }
-  ]
+  "data": {
+    "title": "标签",
+    "list": ["文艺", "博客", "摄影", "电影", "民谣", "旅行", "吉他", "清新"]
+  }
 }
