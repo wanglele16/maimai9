@@ -9,43 +9,102 @@ var common = require('../utils/common.util.js');
 
 common.renderBody($('body'), inHead + inFoot);
 common.append($('.main'), inBody);
+common.switchPage(0);
 
-
+var scrollIndex;
+$('.goBack-index').hide();
 $(function () {
-    var scrollIndex = new IScroll('#wrap-index');
+
+    setTimeout(function() {
+        scrollIndex = new IScroll('#wrap-index',
+            {
+                /*probeType: 3,*/
+                bounce : false
+            });
+        /*scrollIndex.refresh();*/
+
+        $(".goBack-index").on("tap",function(){
+            scrollIndex.scrollTo(0, 0, 200);
+        });
+        scrollIndex.on('scrollEnd', function () {
+            if (this.y < 0) {
+                $('.goBack-index').show();
+            } else {
+                $('.goBack-index').hide();
+            }
+            scrollIndex.refresh();
+
+        });
+    /*var scrollIndex = new IScroll('#wrap-index');*/
+
     var indexSwiper = new Swiper('.swiper-container',
         {
             pagination: '.swiper-pagination',
-            autoplay: 2000,
+            autoplay: 3000,
             autoplayDisableOnInteraction: false,
             grabCursor: true,
-            effect: 'coverflow',
+            /*effect: 'coverflow',*/
             loop: true
-
         });
+    }, 100);
 });
-/*
- $.ajax({
- url: '/api/list.php',
- success: function (res) {
- var html = T('test', res.data);
- common.render($('#test'), html);
- $('#test').show();
- }
- });*/
-/*
- $.ajax({
- url: '/api/list.php',
- success: function (res) {
- var html = T('list', res);
- common.render($('#index-scroll'), html);
- // $('#list').show();
- }
- });
+
+$.ajax({
+    url: '/api/bannerIndex',
+    success: function (res) {
+        var html = template('swi-index', res);
+        common.inner($('#swiper-index'), html);
+    }
+});
+
+$.ajax({
+    url: '/api/recSpeIndex',
+    success: function (res) {
+        var html = template('recSpe-index', res);
+        common.inner($('#rec1-index'), html);
+    }
+});
+
+$.ajax({
+    url: '/api/newIndex',
+    success: function (res) {
+        var html = template('newPro-index', res);
+        common.inner($('#new1-index'), html);
+    }
+});
+
+$.ajax({
+    url: '/api/hotIndex',
+    success: function (res) {
+        var html = template('hotPro-index', res);
+        common.inner($('#hot1-index'), html);
+    }
+});
+
+$.ajax({
+    url: '/api/counIndex',
+    success: function (res) {
+        var html = template('country-index', res);
+        common.inner($('#coun1-index'), html);
+    }
+});
+
+$.ajax({
+    url: '/api/hotSeIndex',
+    success: function (res) {
+        var html = template('hotSearch-index', res);
+        common.inner($('#hotSe1-index'), html);
+    }
+});
 
 
- var myScroll = new IScroll("#index-scroll");
+
+
+
+
+
+/* var myScroll = new IScroll("#index-scroll");
 
  if(图片加载完毕) {
  myScroll.refresh();
- }*/
+ }*!/*/

@@ -13,8 +13,8 @@ var common = {
     },
 
     switchPage: function (index) {
-        $('footer li').eq(index).addClass('active').siblings.removeClass('active');
-        $('#footer').on('tap', 'li', function () {
+        $('#footer-index i').removeClass('active-index').eq(index).addClass('active-index');
+        $('#footer-index li').on('tap', function () {
             location.href = $(this).attr('data-url');
         });
     }

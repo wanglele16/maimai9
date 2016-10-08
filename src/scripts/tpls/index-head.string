@@ -1,13 +1,15 @@
-<section id="wrap-index">
-    <div class="main">
-        <header class="in-head">
-            <h1><a href="/build/prd/index.html"></a></h1>
-            <div class="in-searchbox">
-                <div class="in-searchwrap">
-                    <span class="in-search" id="search"></span>
-                    <input type="text" value="" class="in-searchtext" placeholder="搜索专属于您的味蕾体验" id="globalText">
+<div id="wrapbox-index">
+    <section id="wrap-index">
+        <div class="main">
+            <header class="in-head">
+                <h1><a href="/build/prd/index.html"></a></h1>
+                <div class="in-searchbox">
+                    <div class="in-searchwrap">
+                        <span class="in-search" id="search"></span>
+                        <input type="text" value="" class="in-searchtext" placeholder="搜索专属于您的味蕾体验" id="globalText">
+                    </div>
                 </div>
-            </div>
-        </header>
-    </div>
-</section>
+            </header>
+        </div>
+    </section>
+</div>

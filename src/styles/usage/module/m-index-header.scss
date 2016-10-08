@@ -1,6 +1,7 @@
 @charset "utf-8";
-
-body{
+body {
+  position: relative;
+  font-size: .12rem;
   @include flexbox();
   @include flex-direction(column);
   background: #fff;
@@ -21,37 +22,43 @@ body{
     .in-searchbox {
       @include flex();
       padding-left: .15rem;
-    .in-searchwrap {
-      @include flexbox();
-      @include align-items();
-      height: .22rem;
-      line-height: .22rem;
-      @include border-radius(.15rem);
-      border: 1px #fd617c solid;
-      overflow: hidden;
-      font-size: 80%;
-      span {
-        background: url(/build/images/Search@2x.png) no-repeat;
-        background-size: 100% 100%;
-        width: .15rem;
-        height: .15rem;
-        display: block;
-        margin: 0 .1rem;
+      .in-searchwrap {
+        @include flexbox();
+        @include align-items();
+        height: .22rem;
+        line-height: .22rem;
+        @include border-radius(.15rem);
+        border: 1px #fd617c solid;
+        overflow: hidden;
+        font-size: 80%;
+        span {
+          background: url(/build/images/Search@2x.png) no-repeat;
+          background-size: 100% 100%;
+          width: .15rem;
+          height: .15rem;
+          display: block;
+          margin: 0 .1rem;
+        }
+        input {
+          min-width: 1.4rem;
+        }
       }
-      input {
-        min-width: 1.4rem;
-      }
-    }
     }
   }
 
   #wrap-index {
     width: 100%;
-    overflow: hidden;
-    @include flexbox();
-    @include flex(1, column);
     .main {
       width: 100%;
+      @include flexbox();
+      @include flex-direction(column);
     }
+  }
+
+  #wrapbox-index {
+    @include flexbox();
+    @include flex(1, column);
+    overflow: hidden;
+    width: 100%;
   }
 }
